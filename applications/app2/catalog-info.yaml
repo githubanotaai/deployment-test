@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component 
+metada: 
+  name: geradorsenha
+  description: Aplicacao para gerar senha
+  tags:
+    - nodejs
+spec:
+  type: service
+  lifecycle: production
+  owner: equipe-app2
+  system: meu-sistema-teste
+

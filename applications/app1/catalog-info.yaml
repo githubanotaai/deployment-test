@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component 
+metada: 
+  name: geradorsenha
+  description: calculadora de imc 
+  tags:
+    - python
+spec:
+  type: service
+  lifecycle: production
+  owner: equipe-app1
+  system: meu-sistema-teste

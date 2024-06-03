@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component 
+metada: 
+  name: geradorsenha
+  description: ToDoList
+  tags:
+    - java
+spec:
+  type: service
+  lifecycle: production
+  owner: equipe-app3
+  system: meu-sistema-teste
