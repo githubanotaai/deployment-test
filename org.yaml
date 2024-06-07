@@ -1,0 +1,56 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: infrastructure
+  description: The infra business unit
+spec:
+  type: business-unit
+  profile:
+    displayName: Infrastructure
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: desenvolvimento 
+  description: The desenvolvimento business unit
+spec:
+  type: business-unit
+  profile:
+    displayName: Desenvolvimento 
+    email: desenvolvimento@example.com
+    picture: https://example.com/groups/bu-desenvolvimento.jpeg
+  children: [infrastructure]
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Antonio 
+spec:
+  profile:
+    displayName: Antonio Moreira
+    email: antonio.moreira@anota.ai
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [infrastructure,desenvolvimento]  
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Amanda 
+  tags: 
+    - devops
+  description: PSE Team
+spec:
+  profile:
+    displayName: Amanda Carmo
+    email: amanda.carmo@anota.ai
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [infrastructure]  
