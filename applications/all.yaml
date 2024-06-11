@@ -5,6 +5,6 @@ metadata:
   description: A collection of all Backstage example APIs
 spec:
   targets:
-    - ./app1/catalog-info.yaml
-    - ./app2/catalog-info.yaml
-    - ./app3/catalog-info.yaml
+    - ./appa/catalog-info.yaml
+    - ./appb/catalog-info.yaml
+    - ./appc/catalog-info.yaml
