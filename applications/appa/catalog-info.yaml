@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: app1
+  name: appa
 spec:
   owner: infrastructure
 ---
@@ -14,18 +14,18 @@ spec:
   type: backend
   lifecycle: production
   owner: infrastructure
-  system: app1
+  system: appa
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: api-app1
+  name: api-appa
   description: retornar informações pedidos
 spec:
   type: pedidos
   lifecycle: production
   owner: infrastructure
-  system: app1
+  system: appa
   definition: |
     servers:
       - url: http://artist.spotify.net/v1
@@ -42,4 +42,4 @@ metadata:
 spec:
   type: rabbit
   owner: infrastructure
-  system: app1
+  system: appa
