@@ -8,34 +8,34 @@
 #   owner: infrastructure
 # ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: worker-app1
-spec:
-  type: backend
-  lifecycle: production
-  owner: infrastructure
-  system: app1
-# ---
-# # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
 # apiVersion: backstage.io/v1alpha1
-# kind: API
+# kind: Component
 # metadata:
-#   name: api-app1
-#   description: retornar informações pedidos
+#   name: worker-app1
 # spec:
-#   type: pedidos
+#   type: backend
 #   lifecycle: production
 #   owner: infrastructure
 #   system: app1
-#   definition: |
-#     servers:
-#       - url: http://artist.spotify.net/v1
-#     paths:
-#       /artists:
-#         get:
-#           summary: List all artists
+# ---
+# # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: api-app1
+  description: retornar informações pedidos
+spec:
+  type: pedidos
+  lifecycle: production
+  owner: infrastructure
+  system: app1
+  definition: |
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
 #     ...
 # ---
 # apiVersion: backstage.io/v1alpha1
